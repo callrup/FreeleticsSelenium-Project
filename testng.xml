@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parent_Suite">
+<listeners>
+<listener class-name="main.java.utils.SuiteListener"/>
+</listeners>
+    <test name="Automation Testing">
+    <parameter name ="browserName" value ="chrome" />
+         <classes>
+             <class name="test.java.base.FinalQATest"/>
+          </classes>
+     </test> <!-- Test -->
+</suite> <!-- Suite -->
