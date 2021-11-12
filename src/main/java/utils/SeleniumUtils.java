@@ -1,24 +1,25 @@
 package utils;
 
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import org.openqa.selenium.support.ui.ExpectedCondition;
+//import org.openqa.selenium.support.ui.ExpectedCondition;
 
-import base.BaseTest;
-import jdk.jfr.internal.Logger;
 
 public class SeleniumUtils extends SuiteListener {
 	
@@ -125,6 +126,28 @@ public class SeleniumUtils extends SuiteListener {
     
     public static void switchtToTab() {
         switchToNewTab();
+    }
+    
+    public static void screenshot(WebDriver driver,String screenshotName)
+    {
+
+    	try 
+    	{
+    	TakesScreenshot ts=(TakesScreenshot)driver;
+    	 
+    	File source=ts.getScreenshotAs(OutputType.FILE);
+    	 
+    	FileHandler.copy(source, new File("./Screenshots/"+screenshotName+".png"));
+    	 
+    	System.out.println("Screenshot taken");
+    	} 
+    	catch (Exception e)
+    	{
+    	 
+    	System.out.println("Exception while taking screenshot "+e.getMessage());
+    	} 
+
+
     }
    
     

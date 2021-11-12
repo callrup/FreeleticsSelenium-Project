@@ -17,13 +17,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import jdk.jfr.internal.Logger;
 
 import org.testng.annotations.AfterTest;
 import utils.Constants;
@@ -105,9 +103,7 @@ public class BaseTest {
 			String methodName = result.getMethod().getMethodName();
 			String logText ="Test Case:" + methodName + "Passed";
 			logger.log(Status.PASS, MarkupHelper.createLabel(logText+" PASSED ", ExtentColor.GREEN));
-			logger.pass(result.getThrowable());
-//			Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
-//			Logger.log(Status.PASS,m);
+
 			}
 		else if (result.getStatus() == ITestResult.FAILURE)
 		{
@@ -115,10 +111,9 @@ public class BaseTest {
 			String logText ="Test Case:" + methodName + "Failed";
 			logger.log(Status.FAIL, MarkupHelper.createLabel(logText+" FAILED ", ExtentColor.RED));
 			logger.fail(result.getThrowable());
-//			Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
-//			Logger.log(Status.FAIL,m);
+
 		}
-		driver.quit();
+		
 	}
 	
 	
@@ -127,6 +122,7 @@ public class BaseTest {
 	public void afterTestMethod()
 	{
 		extent.flush();
+		driver.quit();
 	}
 	
 	

@@ -2,12 +2,13 @@ package utils;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import base.BaseTest;
 public class ElementFetch {
 
-	
+	WebDriver driver;
 	public WebElement getWebElement(String IdentifierType, String IdentifierValue) {
 		
 		switch(IdentifierType)

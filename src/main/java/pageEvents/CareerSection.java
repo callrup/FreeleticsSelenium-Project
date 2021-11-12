@@ -1,4 +1,5 @@
 package pageEvents;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 
@@ -6,6 +7,7 @@ import pageObjects.CareerPageElements;
 import utils.ElementFetch;
 import utils.SeleniumUtils;
 public class CareerSection {
+	WebDriver driver;
 	
 	public void clickCareerSection()
 	{
@@ -15,6 +17,7 @@ public class CareerSection {
 		
 		Assert.assertTrue(elementfetch.getWebElement("XPATH",CareerPageElements.careerlink ).isDisplayed());
 		elementfetch.getWebElement("XPATH",CareerPageElements.careerlink ).click();
+		SeleniumUtils.screenshot(driver, "Landing career Page");
 	}
 	
 	
@@ -22,8 +25,11 @@ public class CareerSection {
 	{
 		
 		ElementFetch elementfetch = new ElementFetch();
-		Assert.assertEquals(elementfetch.getWebElement("XPATH",CareerPageElements.openPositions).getText(), "16 open positions");
+		String openPositions = elementfetch.getWebElement("XPATH",CareerPageElements.openPositions).getText();
+		Assert.assertEquals(true, openPositions.contains("open positions"),"Title matching");
+		//Assert.assertEquals(elementfetch.getWebElement("XPATH",CareerPageElements.openPositions).getText().contains("open positions"));
 		elementfetch.getWebElement("XPATH",CareerPageElements.openPositions).click();
+		SeleniumUtils.screenshot(driver, "Click on Open Position");
 	}
 
 }

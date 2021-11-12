@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-11T20:59:21Z" name="Default suite" finished-at="2021-11-11T21:00:00Z" duration-ms="39613">
+  <suite started-at="2021-11-12T12:22:06Z" name="Default suite" finished-at="2021-11-12T12:23:30Z" duration-ms="84253">
     <groups>
     </groups>
-    <test started-at="2021-11-11T20:59:21Z" name="Default test" finished-at="2021-11-11T21:00:00Z" duration-ms="39613">
+    <test started-at="2021-11-12T12:22:06Z" name="Default test" finished-at="2021-11-12T12:23:30Z" duration-ms="84253">
       <class name="base.FinalQATest">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-11T20:59:21Z" name="beforeTestMethod" finished-at="2021-11-11T20:59:21Z" duration-ms="301" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-12T12:22:06Z" name="beforeTestMethod" finished-at="2021-11-12T12:22:12Z" duration-ms="6129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-11T20:59:21Z" name="beforeMethodMethod" finished-at="2021-11-11T20:59:48Z" duration-ms="27278" status="PASS">
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String, java.lang.reflect.Method)[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-12T12:22:12Z" name="beforeMethodMethod" finished-at="2021-11-12T12:23:29Z" duration-ms="76955" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -24,35 +24,95 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethodMethod -->
-        <test-method signature="verifyCareerSectionAndApplyForQAPosition()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-11T20:59:48Z" name="verifyCareerSectionAndApplyForQAPosition" finished-at="2021-11-11T20:59:58Z" duration-ms="9538" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCareerSectionAndApplyForQAPosition -->
-        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-11T20:59:58Z" name="afterMethodMethod" finished-at="2021-11-11T20:59:58Z" duration-ms="203" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyCareerSectionAndApplyForQAPosition status=SUCCESS method=FinalQATest.verifyCareerSectionAndApplyForQAPosition()[pri:0, instance:base.FinalQATest@732d0d24] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null]]>
+              <![CDATA[unknown error: DevToolsActivePort file doesn't exist
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-IF4HBMG', ip: '192.168.1.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00370C43+2493507]
+Ordinal0 [0x0030A4B1+2073777]
+Ordinal0 [0x00212608+1058312]
+Ordinal0 [0x0022FAD2+1178322]
+Ordinal0 [0x0022C35B+1164123]
+Ordinal0 [0x00229DCF+1154511]
+Ordinal0 [0x00259F0F+1351439]
+Ordinal0 [0x00259B7A+1350522]
+Ordinal0 [0x0025580B+1333259]
+Ordinal0 [0x00232314+1188628]
+Ordinal0 [0x0023316F+1192303]
+GetHandleVerifier [0x004F7BF6+1548950]
+GetHandleVerifier [0x005A461C+2256060]
+GetHandleVerifier [0x003FC13B+518107]
+GetHandleVerifier [0x003FB1E0+514176]
+Ordinal0 [0x0030F53D+2094397]
+Ordinal0 [0x00313418+2110488]
+Ordinal0 [0x00313552+2110802]
+Ordinal0 [0x0031CE81+2150017]
+BaseThreadInitThunk [0x76E9FA29+25]
+RtlGetAppContainerNamedObjectPath [0x779B7A9E+286]
+RtlGetAppContainerNamedObjectPath [0x779B7A6E+238]
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
-at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1769)
-at java.base/java.util.regex.Matcher.reset(Matcher.java:415)
-at java.base/java.util.regex.Matcher.<init>(Matcher.java:252)
-at java.base/java.util.regex.Pattern.matcher(Pattern.java:1134)
-at com.aventstack.extentreports.utils.ExceptionUtil.getExceptionHeadline(ExceptionUtil.java:25)
-at com.aventstack.extentreports.ExtentTest.log(ExtentTest.java:287)
-at com.aventstack.extentreports.ExtentTest.pass(ExtentTest.java:361)
-at base.BaseTest.afterMethodMethod(BaseTest.java:108)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn't exist
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-IF4HBMG', ip: '192.168.1.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00370C43+2493507]
+Ordinal0 [0x0030A4B1+2073777]
+Ordinal0 [0x00212608+1058312]
+Ordinal0 [0x0022FAD2+1178322]
+Ordinal0 [0x0022C35B+1164123]
+Ordinal0 [0x00229DCF+1154511]
+Ordinal0 [0x00259F0F+1351439]
+Ordinal0 [0x00259B7A+1350522]
+Ordinal0 [0x0025580B+1333259]
+Ordinal0 [0x00232314+1188628]
+Ordinal0 [0x0023316F+1192303]
+GetHandleVerifier [0x004F7BF6+1548950]
+GetHandleVerifier [0x005A461C+2256060]
+GetHandleVerifier [0x003FC13B+518107]
+GetHandleVerifier [0x003FB1E0+514176]
+Ordinal0 [0x0030F53D+2094397]
+Ordinal0 [0x00313418+2110488]
+Ordinal0 [0x00313552+2110802]
+Ordinal0 [0x0031CE81+2150017]
+BaseThreadInitThunk [0x76E9FA29+25]
+RtlGetAppContainerNamedObjectPath [0x779B7A9E+286]
+RtlGetAppContainerNamedObjectPath [0x779B7A6E+238]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at base.BaseTest.setupDriver(BaseTest.java:41)
+at base.BaseTest.beforeMethodMethod(BaseTest.java:84)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,7 +121,7 @@ at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelpe
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
 at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
 at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -83,11 +143,139 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method signature="verifyCareerSectionAndApplyForQAPosition()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-12T12:23:29Z" name="verifyCareerSectionAndApplyForQAPosition" finished-at="2021-11-12T12:23:29Z" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: DevToolsActivePort file doesn't exist
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-IF4HBMG', ip: '192.168.1.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00370C43+2493507]
+Ordinal0 [0x0030A4B1+2073777]
+Ordinal0 [0x00212608+1058312]
+Ordinal0 [0x0022FAD2+1178322]
+Ordinal0 [0x0022C35B+1164123]
+Ordinal0 [0x00229DCF+1154511]
+Ordinal0 [0x00259F0F+1351439]
+Ordinal0 [0x00259B7A+1350522]
+Ordinal0 [0x0025580B+1333259]
+Ordinal0 [0x00232314+1188628]
+Ordinal0 [0x0023316F+1192303]
+GetHandleVerifier [0x004F7BF6+1548950]
+GetHandleVerifier [0x005A461C+2256060]
+GetHandleVerifier [0x003FC13B+518107]
+GetHandleVerifier [0x003FB1E0+514176]
+Ordinal0 [0x0030F53D+2094397]
+Ordinal0 [0x00313418+2110488]
+Ordinal0 [0x00313552+2110802]
+Ordinal0 [0x0031CE81+2150017]
+BaseThreadInitThunk [0x76E9FA29+25]
+RtlGetAppContainerNamedObjectPath [0x779B7A9E+286]
+RtlGetAppContainerNamedObjectPath [0x779B7A6E+238]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn't exist
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-IF4HBMG', ip: '192.168.1.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00370C43+2493507]
+Ordinal0 [0x0030A4B1+2073777]
+Ordinal0 [0x00212608+1058312]
+Ordinal0 [0x0022FAD2+1178322]
+Ordinal0 [0x0022C35B+1164123]
+Ordinal0 [0x00229DCF+1154511]
+Ordinal0 [0x00259F0F+1351439]
+Ordinal0 [0x00259B7A+1350522]
+Ordinal0 [0x0025580B+1333259]
+Ordinal0 [0x00232314+1188628]
+Ordinal0 [0x0023316F+1192303]
+GetHandleVerifier [0x004F7BF6+1548950]
+GetHandleVerifier [0x005A461C+2256060]
+GetHandleVerifier [0x003FC13B+518107]
+GetHandleVerifier [0x003FB1E0+514176]
+Ordinal0 [0x0030F53D+2094397]
+Ordinal0 [0x00313418+2110488]
+Ordinal0 [0x00313552+2110802]
+Ordinal0 [0x0031CE81+2150017]
+BaseThreadInitThunk [0x76E9FA29+25]
+RtlGetAppContainerNamedObjectPath [0x779B7A9E+286]
+RtlGetAppContainerNamedObjectPath [0x779B7A6E+238]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at base.BaseTest.setupDriver(BaseTest.java:41)
+at base.BaseTest.beforeMethodMethod(BaseTest.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCareerSectionAndApplyForQAPosition -->
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-12T12:23:29Z" name="afterMethodMethod" finished-at="2021-11-12T12:23:29Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-11T20:59:58Z" name="afterTestMethod" finished-at="2021-11-11T21:00:00Z" duration-ms="2209" status="PASS">
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:base.FinalQATest@732d0d24]" started-at="2021-11-12T12:23:29Z" name="afterTestMethod" finished-at="2021-11-12T12:23:30Z" duration-ms="893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->
