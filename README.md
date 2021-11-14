@@ -1,4 +1,4 @@
-# Selenium Project : Automated testing with Java, Selenium WebDriver and Maven ,TestNG.** 
+# Selenium Project : Automated testing with Java, Selenium WebDriver and Maven ,TestNG.
 
 
 Automated testing with Java, Selenium WebDriver Maven  and TestNG .Extent reporting tool has been used for reporting
