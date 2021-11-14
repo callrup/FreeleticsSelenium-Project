@@ -1,0 +1,59 @@
+1. Which parts of the code you provided would need to be adapted to run the same
+tests in an Android phone, using the same browser, in the tool you chose?
+
+1. Initialize android driver
+2.Add desired capabilities 
+3. You have to adapt the below code to run the WEB UI tests in Android.The example is of Appium
+
+if (browserName.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+		else if(browserName.equalsIgnoreCase("firefox"))
+		{
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"geckodriver.exe");
+			driver = new FirefoxDriver();
+		}
+		else
+		{
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+    
+		//Initialize Browser 
+		setupDriver(browserName);
+		// Maximize Window
+		driver.manage().window().maximize();
+		//delete cookies
+		driver.manage().deleteAllCookies();
+		// Get Url 
+		driver.get(Constants.url);
+		//Set Implicit wait for 20 sec
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+2. How could we run these tests in a physical android phone connected to your laptop?
+Does the laptop need any extra software/hardware to run them properly?
+
+
+3. What would be the main changes if the website was now part of a hybrid android
+app?
+
+Appium comes with built-in hybrid support via Chromedriver
+
+It is necessary to set true the setWebContentsDebuggingEnabled property on the android.webkit.WebView element.
+
+add capabilities and initialize android driver
+
+SET CONTEXT TO WEB_VIEW
+
+Set<String> contextNames = driver.getContextHandles();
+for (String contextName : contextNames) {
+    System.out.println(contextName); 
+}
+driver.context(contextNames.toArray()[1]);
+
+4. And if it was a native app?
+
+
+simply set the context again with the native context id (generally 'NATIVE_APP') to leave the web context and once again access the native commands.
