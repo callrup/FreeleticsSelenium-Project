@@ -1,4 +1,4 @@
-1. Which parts of the code you provided would need to be adapted to run the same
+# 1. Which parts of the code you provided would need to be adapted to run the same
 tests in an Android phone, using the same browser, in the tool you chose?
 
 1. Initialize android driver
