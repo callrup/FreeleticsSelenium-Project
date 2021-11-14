@@ -2,24 +2,9 @@
 tests in an Android phone, using the same browser, in the tool you chose?
 
 1. Initialize android driver
-2.Add desired capabilities 
+2.Add desired capabilities  and also add browser as capability lrtjh
 3. You have to adapt the below code to run the WEB UI tests in Android.The example is of Appium
 
-if (browserName.equalsIgnoreCase("chrome"))
-		{
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"chromedriver.exe");
-			driver = new ChromeDriver();
-		}
-		else if(browserName.equalsIgnoreCase("firefox"))
-		{
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"geckodriver.exe");
-			driver = new FirefoxDriver();
-		}
-		else
-		{
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + File.separator+ "drivers"+ File.separator	+"chromedriver.exe");
-			driver = new ChromeDriver();
-		}
     
 		//Initialize Browser 
 		setupDriver(browserName);
@@ -49,11 +34,10 @@ SET CONTEXT TO WEB_VIEW
 
 Set<String> contextNames = driver.getContextHandles();
 for (String contextName : contextNames) {
-    System.out.println(contextName); 
+    System.out.println(contextName); //print all the context
 }
-driver.context(contextNames.toArray()[1]);
+driver.context(contextNames.toArray()[id of web view]);
 
 4. And if it was a native app?
 
-
-simply set the context again with the native context id (generally 'NATIVE_APP') to leave the web context and once again access the native commands.
+a. Add appPackage and Appactivity in desired capabilitiesk;k'
