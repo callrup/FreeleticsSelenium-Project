@@ -41,7 +41,7 @@ Step 3 : Set environment variables
  ANDROID_HOME = location of sdk folder
  Path : append path of platform_tools folder
 ----------------------------------------------------------------------------------
-Step 4 : Check command adb devices on command line
+Step 4 : Check command adb devices on command line --sdkmanager platform-tools platforms android-29
 ----------------------------------------------------------------------------------
 Step 5 : Make device ready
  - enable developer mode
