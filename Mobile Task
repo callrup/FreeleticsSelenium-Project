@@ -1,10 +1,10 @@
-# 1. Which parts of the code you provided would need to be adapted to run the same
+ 1. Which parts of the code you provided would need to be adapted to run the same
 tests in an Android phone, using the same browser, in the tool you chose?
 
-1. Initialize android driver
-2.Add desired capabilities  and also add browser as capability 
+A. Initialize android driver
+B.Add desired capabilities  and also add browser as capability 
 capabilities.setCapability("browserName", "Chrome");
-3. You have to adapt the below code to run the WEB UI tests in Android.The example is of Appium
+C. You have to adapt the below code to run the WEB UI tests in Android.The example is of Appium
 
     
 		//Initialize Browser 
@@ -74,3 +74,15 @@ driver.context(contextNames.toArray()[id of web view]);
 4. And if it was a native app?
 
 a. Add appPackage and Appactivity in desired capabilitiesk
+b.capabilities.setCapability(“autoGrantPermissions”, true);The code below allows the app to grant all the permissions so that no pop up occurs during the testing phase.
+c. // assuming we have an initialized `driver` object for an app
+driver
+.contexts().then(function (contexts) { // get list of available views. Returns array: ["NATIVE_APP","WEBVIEW_1"]
+return driver.context(contexts[1]); // choose the webview context
+})
+// do some web testing
+.elementsByCss('.green_button').click()
+
+.context('NATIVE_APP') // leave webview context
+// do more native stuff here if we want
+.quit() // stop WebDriver
