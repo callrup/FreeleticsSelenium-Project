@@ -2,7 +2,8 @@
 tests in an Android phone, using the same browser, in the tool you chose?
 
 1. Initialize android driver
-2.Add desired capabilities  and also add browser as capability lrtjh
+2.Add desired capabilities  and also add browser as capability 
+capabilities.setCapability("browserName", "Chrome");
 3. You have to adapt the below code to run the WEB UI tests in Android.The example is of Appium
 
     
@@ -20,6 +21,38 @@ tests in an Android phone, using the same browser, in the tool you chose?
 2. How could we run these tests in a physical android phone connected to your laptop?
 Does the laptop need any extra software/hardware to run them properly?
 
+200 MB to 1 GB of free space  in Laptop
+
+there are 2 ways :
+1st Way 
+
+  1.Download team viewer Quick support 
+  2.AirDroid 4 :Remote access & File  to mirror android device
+ 
+ 
+ 2nd way 
+ 
+Step 1 : Download SDK tools
+ https://developer.android.com/studio
+----------------------------------------------------------------------------------
+Step 2 : Unzip folder & Extract platform tools
+----------------------------------------------------------------------------------
+Step 3 : Set environment variables
+ ANDROID_HOME = location of sdk folder
+ Path : append path of platform_tools folder
+----------------------------------------------------------------------------------
+Step 4 : Check command adb devices on command line
+----------------------------------------------------------------------------------
+Step 5 : Make device ready
+ - enable developer mode
+ - make USB Debugging on
+----------------------------------------------------------------------------------
+Step 6 : Connect device to computer system thorugh USB cable
+ - if asked enable USB Debbugging
+----------------------------------------------------------------------------------
+Step 7 : Run command adb devices
+  adb = android debug bridge
+ Check your device id displayed
 
 3. What would be the main changes if the website was now part of a hybrid android
 app?
@@ -40,4 +73,4 @@ driver.context(contextNames.toArray()[id of web view]);
 
 4. And if it was a native app?
 
-a. Add appPackage and Appactivity in desired capabilitiesk;k'
+a. Add appPackage and Appactivity in desired capabilitiesk
