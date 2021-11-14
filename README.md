@@ -1,10 +1,10 @@
-** Project : Automated testing with Java, Selenium WebDriver and Maven ,TestNG.** 
+# Selenium Project : Automated testing with Java, Selenium WebDriver and Maven ,TestNG.** 
 
 
 Automated testing with Java, Selenium WebDriver Maven  and TestNG .Extent reporting tool has been used for reporting
 This is a POM based project  with  which can be run from Command line  and locally through maven /TestNg
 
-Prerequisites / Setup
+# Prerequisites / Setup
 have Java installed locally
 have Maven installed locally
 have ChromeDriver installed locally
@@ -24,7 +24,7 @@ https://maven.apache.org/install.html
 
 https://chromedriver.chromium.org/downloads
 
-Running the tests from command line
+# Running the tests from command line
 after installing all the dependencies, and cloning the project, go to the project directory in the terminal
 use mvn test from command line to initialize the test.
 
