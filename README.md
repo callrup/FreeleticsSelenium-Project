@@ -2,7 +2,7 @@
 
 
 Automated testing with Java, Selenium WebDriver Maven  and TestNG .Extent reporting tool has been used for reporting
-This is a POM based project  with  which can be run from Command line  and locally through maven /TestNg
+This is a POM based project  with  which can be run from Command line  and locally through maven /TestNg . This project has auto retry facility.If any test case is failed there will be an auto retry to rerun the test. Extent Reporting tool has been incorporated so that post run we can verify the dashboard
 
 # Prerequisites / Setup
 have Java installed locally
