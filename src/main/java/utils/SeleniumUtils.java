@@ -130,7 +130,7 @@ public class SeleniumUtils extends SuiteListener {
     
     public static void screenshot(WebDriver driver,String screenshotName)
     {
-
+       if (driver instanceof TakesScreenshot) {
     	try 
     	{
     	TakesScreenshot ts=(TakesScreenshot)driver;
@@ -146,7 +146,7 @@ public class SeleniumUtils extends SuiteListener {
     	 
     	System.out.println("Exception while taking screenshot "+e.getMessage());
     	} 
-
+       }
 
     }
    
